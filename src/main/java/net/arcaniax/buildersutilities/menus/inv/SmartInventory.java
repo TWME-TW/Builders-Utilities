@@ -76,7 +76,7 @@ public class SmartInventory {
 
         InventoryOpener opener = this.manager.findOpener(type)
                 .orElseThrow(() -> new IllegalStateException(
-                        "No opener found for the inventory type " + type.name()));
+                        "找不到庫存類型 " + type.name() + "的開啟器"));
         Inventory handle = opener.open(this, player);
 
         this.manager.setInventory(player, this);

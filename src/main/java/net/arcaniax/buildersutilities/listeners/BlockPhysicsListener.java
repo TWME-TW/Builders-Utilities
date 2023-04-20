@@ -93,7 +93,7 @@ public class BlockPhysicsListener implements Listener {
                 e.setCancelled(true);
                 if (Settings.sendDebugMessages) {
                     logger.info(
-                            "Gravity physics were cancelled because disable-gravity-physics: true");
+                            "方塊重力(掉落)被取消是因為 disable-gravity-physics: true");
                 }
 
             }
@@ -102,7 +102,7 @@ public class BlockPhysicsListener implements Listener {
                 e.setCancelled(true);
                 if (Settings.sendDebugMessages) {
                     logger.info(
-                            "Physics were cancelled because disable-physics: true");
+                            "方塊物理被取消是因為 disable-physics: true");
                 }
             }
         }

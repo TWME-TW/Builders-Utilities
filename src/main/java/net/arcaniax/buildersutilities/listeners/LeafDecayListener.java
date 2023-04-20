@@ -35,7 +35,7 @@ public class LeafDecayListener implements Listener {
             event.setCancelled(true);
             if (Settings.sendDebugMessages) {
                 logger.info(
-                        "Leaf decay was cancelled because disable-leaves-decay: true");
+                        "樹葉腐爛被取消，因為 disable-leaves-decay: true");
             }
         }
     }

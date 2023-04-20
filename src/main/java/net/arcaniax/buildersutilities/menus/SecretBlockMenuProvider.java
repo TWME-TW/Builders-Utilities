@@ -29,31 +29,31 @@ import org.bukkit.inventory.ItemStack;
 
 public class SecretBlockMenuProvider implements InventoryProvider {
 
-    private static final ItemStack SPAWNER = Items.create(Material.SPAWNER, ChatColor.BLUE + "Spawner", "");
-    private static final ItemStack BARRIER = Items.create(Material.BARRIER, ChatColor.RED + "Barrier", "");
+    private static final ItemStack SPAWNER = Items.create(Material.SPAWNER, ChatColor.BLUE + "生怪磚", "");
+    private static final ItemStack BARRIER = Items.create(Material.BARRIER, ChatColor.RED + "屏障", "");
     private static final ItemStack DRAGON_EGG = Items.create(
             Material.DRAGON_EGG,
-            ChatColor.LIGHT_PURPLE + "Dragon Egg",
+            ChatColor.LIGHT_PURPLE + "龍蛋",
             ""
     );
     private static final ItemStack STRUCTURE_VOID = Items.create(
             Material.STRUCTURE_VOID,
-            ChatColor.DARK_AQUA + "Structure Void",
+            ChatColor.DARK_AQUA + "結構空位",
             ""
     );
     private static final ItemStack DEBUG_STICK = Items.create(
             Material.DEBUG_STICK,
-            ChatColor.AQUA + "Debug Stick",
-            "&7Only works as operator in creative."
+            ChatColor.AQUA + "除錯棒",
+            "&7只有在創造模式下才有效"
     );
     private static final ItemStack STRUCTURE_BLOCK = Items.create(
             Material.STRUCTURE_BLOCK,
-            ChatColor.AQUA + "Structure Block",
+            ChatColor.AQUA + "結構方塊",
             ""
     );
     private static final ItemStack LIGHT = Items.create(
-            "LIGHT",
-            ChatColor.GOLD + "Light Block",
+            "光源方塊",
+            ChatColor.GOLD + "光源方塊",
             ""
     );
 

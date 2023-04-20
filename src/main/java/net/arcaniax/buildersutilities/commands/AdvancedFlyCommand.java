@@ -37,9 +37,9 @@ public class AdvancedFlyCommand implements ICommand {
         }
 
         if (PlayerMoveListener.togglePlayer(player)) {
-            player.sendMessage(BuildersUtilities.MSG_PREFIX + "Advanced Fly " + ChatColor.GREEN + "enabled");
+            player.sendMessage(BuildersUtilities.MSG_PREFIX + "高級飛行 " + ChatColor.GREEN + "啟用");
         } else {
-            player.sendMessage(BuildersUtilities.MSG_PREFIX + "Advanced Fly " + ChatColor.RED + "disabled");
+            player.sendMessage(BuildersUtilities.MSG_PREFIX + "高級飛行 " + ChatColor.RED + "停用");
         }
     }
 

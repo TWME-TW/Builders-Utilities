@@ -31,10 +31,10 @@ public class ChestInventoryOpener implements InventoryOpener {
     @Override
     public Inventory open(SmartInventory inv, Player player) {
         Preconditions.checkArgument(inv.getColumns() == 9,
-                "The column count for the chest inventory must be 9, found: %s.", inv.getColumns()
+                "箱子物品欄的列數必須為 9，發現: %s.", inv.getColumns()
         );
         Preconditions.checkArgument(inv.getRows() >= 1 && inv.getRows() <= 6,
-                "The row count for the chest inventory must be between 1 and 6, found: %s", inv.getRows()
+                "箱子物品欄的行數必須在 1 到 6 之間，發現: %s", inv.getRows()
         );
 
         InventoryManager manager = inv.getManager();

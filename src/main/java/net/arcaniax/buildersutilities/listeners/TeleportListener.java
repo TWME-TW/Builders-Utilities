@@ -39,7 +39,7 @@ public class TeleportListener implements Listener {
                 event.setCancelled(true);
                 if (Settings.sendDebugMessages) {
                     logger.info(
-                            "Spectate teleport was cancelled because {} lacks the permission builders.util.tpgm3",
+                            "觀察者傳送被取消，因為 {} 缺少權限 builders.util.tpgm3",
                             event.getPlayer()
                     );
                 }

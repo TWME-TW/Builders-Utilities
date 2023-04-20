@@ -31,7 +31,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ColorMenuProvider implements InventoryProvider {
 
     private static final float MULTIPLIER = 255f / 20f;
-    private static final String LORE = "&7__&7Left click to increase__&7Right click to decrease__&7Shift click to change by 5";
+    private static final String LORE = "&7__&7左鍵點擊以增加__&7右鍵點擊以減少__&7Shift 鍵點擊以增加、減少 5";
 
     @Override
     public void init(Player player, InventoryContents contents) {
@@ -91,11 +91,11 @@ public class ColorMenuProvider implements InventoryProvider {
 
     private void setRedItem(Player player, InventoryContents contents, int amount) {
         contents.set(3, 4, ClickableItem.of(
-                amount == 0 ? Items.create(Material.RED_STAINED_GLASS, "&cRed", LORE) :
+                amount == 0 ? Items.create(Material.RED_STAINED_GLASS, "&c紅", LORE) :
                         Items.createHead(
                                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y0NmMzMWQ2ZWU2ZWE2MTlmNzJlNzg1MjMyY2IwNDhhYjI3MDQ2MmRiMGNiMTQ1NDUxNDQzNjI1MWMxYSJ9fX0=",
                                 amount,
-                                "&cRed",
+                                "&c紅",
                                 LORE
                         ), inventoryClickEvent -> {
                     if (inventoryClickEvent.isShiftClick()) {
@@ -115,7 +115,7 @@ public class ColorMenuProvider implements InventoryProvider {
         contents.set(2, 4, ClickableItem.of(Items.createHead(
                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTEzMWRlOGU5NTFmZGQ3YjlhM2QyMzlkN2NjM2FhM2U4NjU1YTMzNmI5OTliOWVkYmI0ZmIzMjljYmQ4NyJ9fX0=",
                 1,
-                "&cClick to randomize",
+                "&c隨機選擇",
                 ""
         ), inventoryClickEvent -> {
             setRedItem(player, contents, ThreadLocalRandom.current().nextInt(0, 21));
@@ -125,11 +125,11 @@ public class ColorMenuProvider implements InventoryProvider {
 
     private void setGreenItem(Player player, InventoryContents contents, int amount) {
         contents.set(3, 5, ClickableItem.of(
-                amount == 0 ? Items.create(Material.GREEN_STAINED_GLASS, "&aGreen", LORE) :
+                amount == 0 ? Items.create(Material.GREEN_STAINED_GLASS, "&a綠", LORE) :
                         Items.createHead(
                                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZmNjlmN2I3NTM4YjQxZGMzNDM5ZjM2NThhYmJkNTlmYWNjYTM2NmYxOTBiY2YxZDZkMGEwMjZjOGY5NiJ9fX0=",
                                 amount,
-                                "&aGreen",
+                                "&a綠",
                                 LORE
                         ), inventoryClickEvent -> {
                     if (inventoryClickEvent.isShiftClick()) {
@@ -149,7 +149,7 @@ public class ColorMenuProvider implements InventoryProvider {
         contents.set(2, 5, ClickableItem.of(Items.createHead(
                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWMzY2VjNjg3NjlmZTljOTcxMjkxZWRiN2VmOTZhNGUzYjYwNDYyY2ZkNWZiNWJhYTFjYmIzYTcxNTEzZTdiIn19fQ==",
                 1,
-                "&aClick to randomize",
+                "&a隨機選擇",
                 ""
         ), inventoryClickEvent -> {
             setGreenItem(player, contents, ThreadLocalRandom.current().nextInt(0, 21));
@@ -159,11 +159,11 @@ public class ColorMenuProvider implements InventoryProvider {
 
     private void setBlueItem(Player player, InventoryContents contents, int amount) {
         contents.set(3, 6, ClickableItem.of(
-                amount == 0 ? Items.create(Material.BLUE_STAINED_GLASS, "&bBlue", LORE) :
+                amount == 0 ? Items.create(Material.BLUE_STAINED_GLASS, "&b藍", LORE) :
                         Items.createHead(
                                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjgzOWUzODFkOWZlZGFiNmY4YjU5Mzk2YTI3NjQyMzhkY2ViMmY3ZWVhODU2ZGM2ZmM0NDc2N2RhMzgyZjEifX19",
                                 amount,
-                                "&bBlue",
+                                "&b藍",
                                 LORE
                         ), inventoryClickEvent -> {
                     if (inventoryClickEvent.isShiftClick()) {
@@ -183,7 +183,7 @@ public class ColorMenuProvider implements InventoryProvider {
         contents.set(2, 6, ClickableItem.of(Items.createHead(
                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjMyOGYzNzhmMjhhOTg3MjIyNmY1Y2UwNGQ2ZTFkZmExMTE2MTg1ODdmNDhkZmExZmU4MmQwNDMyMTZhNWNmIn19fQ==",
                 1,
-                "&bClick to randomize",
+                "&b隨機選擇",
                 ""
         ), inventoryClickEvent -> {
             setBlueItem(player, contents, ThreadLocalRandom.current().nextInt(0, 21));

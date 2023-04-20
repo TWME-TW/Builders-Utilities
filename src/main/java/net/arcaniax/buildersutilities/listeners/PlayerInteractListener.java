@@ -48,7 +48,7 @@ public class PlayerInteractListener implements Listener {
             event.setCancelled(true);
             if (Settings.sendDebugMessages) {
                 logger.info(
-                        "Dragon egg teleport was cancelled because prevent-dragon-egg-teleport: true");
+                        "龍蛋傳送被取消是因為 prevent-dragon-egg-teleport: true");
             }
         }
     }
@@ -66,7 +66,7 @@ public class PlayerInteractListener implements Listener {
                     event.setCancelled(true);
                     if (Settings.sendDebugMessages) {
                         logger.info(
-                                "Soil trampling was cancelled because disable-soil-trample: true");
+                                "土壤踐踏被取消，因為 disable-soil-trample: true");
                     }
                 }
             }

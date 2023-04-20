@@ -39,13 +39,13 @@ public class NoClipCommand implements ICommand {
 
         if (NoClipManager.noClipPlayerIds.contains(player.getUniqueId())) {
             NoClipManager.noClipPlayerIds.remove(player.getUniqueId());
-            player.sendMessage(BuildersUtilities.MSG_PREFIX + "NoClip " + ChatColor.RED + "disabled");
+            player.sendMessage(BuildersUtilities.MSG_PREFIX + "穿牆 " + ChatColor.RED + "已關閉");
             if (player.getGameMode() == GameMode.SPECTATOR) {
                 player.setGameMode(GameMode.CREATIVE);
             }
         } else {
             NoClipManager.noClipPlayerIds.add(player.getUniqueId());
-            player.sendMessage(BuildersUtilities.MSG_PREFIX + "NoClip " + ChatColor.GREEN + "enabled");
+            player.sendMessage(BuildersUtilities.MSG_PREFIX + "穿牆 " + ChatColor.GREEN + "已啟用");
         }
     }
 

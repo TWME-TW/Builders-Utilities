@@ -46,8 +46,9 @@ import org.incendo.serverlib.ServerLib;
 public final class BuildersUtilities extends JavaPlugin {
 
     public static final String MSG_PREFIX = ChatColor.DARK_AQUA + "Builders-Utilities > " + ChatColor.AQUA;
-    public static final String MSG_NO_PERMISSION = MSG_PREFIX + ChatColor.AQUA + "You do not have access to this command. Lacking permission: " + ChatColor.RED;
-    public static final String MSG_ERROR = MSG_PREFIX + ChatColor.DARK_RED + "Error: " + ChatColor.RED;
+    public static final String MSG_NO_PERMISSION =
+            MSG_PREFIX + ChatColor.AQUA + "你沒有權限執行此指令。缺少權限：" + ChatColor.RED;
+    public static final String MSG_ERROR = MSG_PREFIX + ChatColor.DARK_RED + "錯誤：" + ChatColor.RED;
     private static final int BSTATS_ID = 5168;
     private static BuildersUtilities instance;
     private Settings settings;

@@ -40,16 +40,16 @@ public class UtilitiesMenuProvider implements InventoryProvider {
     private static final ItemStack DISABLED = Items.create(Material.RED_STAINED_GLASS_PANE, "&c", "");
     private static final ItemStack NO_PERMISSION = Items.create(Material.ORANGE_STAINED_GLASS_PANE, "&c", "");
 
-    private static final String ENABLED_LORE = "&a&lEnabled__&7__&7Click to toggle";
-    private static final String DISABLED_LORE = "&c&lDisabled__&7__&7Click to toggle";
+    private static final String ENABLED_LORE = "&a&l啟用__&7__&7點擊切換";
+    private static final String DISABLED_LORE = "&c&l停用__&7__&7點擊切換";
 
-    private static final String IRON_TRAPDOOR_LORE = "__&c__&8&oActs like wooden trapdoors";
-    private static final String SLAB_BREAKING_LORE = "__&c__&8&oHold any slab to break double slab blocks";
-    private static final String GLAZED_ROTATING_LORE = "__&c__&8&oShift right click with empty hand";
+    private static final String IRON_TRAPDOOR_LORE = "__&c__&8&o像木活板門一樣運作";
+    private static final String SLAB_BREAKING_LORE = "__&c__&8&o拿著任何半磚塊可以打破雙層半磚塊";
+    private static final String GLAZED_ROTATING_LORE = "__&c__&8&o按下 Shift 鍵並使用空手右鍵點擊";
 
-    private static final String NIGHT_VISION_LORE = "__&c__&8&oSee in the dark";
-    private static final String NO_CLIP_LORE = "__&c__&8&oFly through blocks with ease";
-    private static final String ADVANCED_FLY_LORE = "__&c__&8&oRemoves velocity when you stop flying";
+    private static final String NIGHT_VISION_LORE = "__&c__&8&o黑暗中看得見";
+    private static final String NO_CLIP_LORE = "__&c__&8&o輕鬆穿過方塊飛行";
+    private static final String ADVANCED_FLY_LORE = "__&c__&8&o在停止飛行時消除速度";
 
     @Override
     public void init(Player player, InventoryContents contents) {
@@ -65,7 +65,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
         if (!player.hasPermission("builders.util.trapdoor")) {
             setNoPermission(1, contents);
             contents.set(1, 1, ClickableItem.empty(
-                    Items.create(Material.IRON_TRAPDOOR, "&6Iron Trapdoor Interaction", "&7&lNo Permission")));
+                    Items.create(Material.IRON_TRAPDOOR, "&6鐵活板門交互", "&7&l沒有權限")));
             return;
         }
 
@@ -73,7 +73,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(1, true, contents);
             contents.set(1, 1, ClickableItem.of(
                     Items.create(Material.IRON_TRAPDOOR,
-                            "&6Iron Trapdoor Interaction", ENABLED_LORE + IRON_TRAPDOOR_LORE
+                            "&6鐵活板門交互", ENABLED_LORE + IRON_TRAPDOOR_LORE
                     ),
                     inventoryClickEvent -> {
                         IronTrapdoorListener.ironTrapdoorIds.add(player.getUniqueId());
@@ -84,7 +84,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(1, false, contents);
             contents.set(1, 1, ClickableItem.of(
                     Items.create(Material.IRON_TRAPDOOR,
-                            "&6Iron Trapdoor Interaction", DISABLED_LORE + IRON_TRAPDOOR_LORE
+                            "&6鐵活板門交互", DISABLED_LORE + IRON_TRAPDOOR_LORE
                     ),
                     inventoryClickEvent -> {
                         IronTrapdoorListener.ironTrapdoorIds.remove(player.getUniqueId());
@@ -98,7 +98,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
         if (!player.hasPermission("builders.util.slabs")) {
             setNoPermission(2, contents);
             contents.set(1, 2, ClickableItem.empty(
-                    Items.create(Material.STONE_SLAB, "&6Custom Slab Breaking", "&7&lNo Permission")));
+                    Items.create(Material.STONE_SLAB, "&6自定義半磚破壞", "&7&l沒有權限")));
             return;
         }
 
@@ -106,7 +106,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(2, true, contents);
             contents.set(1, 2, ClickableItem.of(
                     Items.create(Material.STONE_SLAB,
-                            "&6Custom Slab Breaking", ENABLED_LORE + SLAB_BREAKING_LORE
+                            "&6自定義半磚破壞", ENABLED_LORE + SLAB_BREAKING_LORE
                     ),
                     inventoryClickEvent -> {
                         BlockBreakListener.slabIds.add(player.getUniqueId());
@@ -117,7 +117,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(2, false, contents);
             contents.set(1, 2, ClickableItem.of(
                     Items.create(Material.STONE_SLAB,
-                            "&6Custom Slab Breaking", DISABLED_LORE + SLAB_BREAKING_LORE
+                            "&6自定義半磚破壞", DISABLED_LORE + SLAB_BREAKING_LORE
                     ),
                     inventoryClickEvent -> {
                         BlockBreakListener.slabIds.remove(player.getUniqueId());
@@ -131,7 +131,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
         if (!player.hasPermission("builders.util.terracotta")) {
             setNoPermission(3, contents);
             contents.set(1, 3, ClickableItem.empty(
-                    Items.create(Material.ORANGE_GLAZED_TERRACOTTA, "&6Glazed Terracotta Rotating", "&7&lNo Permission")));
+                    Items.create(Material.ORANGE_GLAZED_TERRACOTTA, "&6釉面陶瓦旋轉", "&7&l沒有權限")));
             return;
         }
 
@@ -139,7 +139,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(3, true, contents);
             contents.set(1, 3, ClickableItem.of(
                     Items.create(Material.ORANGE_GLAZED_TERRACOTTA,
-                            "&6Glazed Terracotta Rotating", ENABLED_LORE + GLAZED_ROTATING_LORE
+                            "&6釉面陶瓦旋轉", ENABLED_LORE + GLAZED_ROTATING_LORE
                     ),
                     inventoryClickEvent -> {
                         TerracottaInteractListener.terracottaIds.add(player.getUniqueId());
@@ -150,7 +150,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(3, false, contents);
             contents.set(1, 3, ClickableItem.of(
                     Items.create(Material.ORANGE_GLAZED_TERRACOTTA,
-                            "&6Glazed Terracotta Rotating", DISABLED_LORE + GLAZED_ROTATING_LORE
+                            "&6釉面陶瓦旋轉", DISABLED_LORE + GLAZED_ROTATING_LORE
                     ),
                     inventoryClickEvent -> {
                         TerracottaInteractListener.terracottaIds.remove(player.getUniqueId());
@@ -165,7 +165,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
         if (!player.hasPermission("builders.util.nightvision")) {
             setNoPermission(5, contents);
             contents.set(1, 5, ClickableItem.empty(
-                    Items.create(Material.ENDER_EYE, "&6Night Vision", "&7&lNo Permission")));
+                    Items.create(Material.ENDER_EYE, "&6夜視", "&7&l沒有權限")));
             return;
         }
 
@@ -173,7 +173,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(5, true, contents);
             contents.set(1, 5, ClickableItem.of(
                     Items.create(Material.ENDER_EYE,
-                            "&6Night Vision", ENABLED_LORE + NIGHT_VISION_LORE
+                            "&6夜視", ENABLED_LORE + NIGHT_VISION_LORE
                     ),
                     inventoryClickEvent -> {
                         player.removePotionEffect(PotionEffectType.NIGHT_VISION);
@@ -184,7 +184,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(5, false, contents);
             contents.set(1, 5, ClickableItem.of(
                     Items.create(Material.ENDER_EYE,
-                            "&6Night Vision", DISABLED_LORE + NIGHT_VISION_LORE
+                            "&6夜視", DISABLED_LORE + NIGHT_VISION_LORE
                     ),
                     inventoryClickEvent -> {
                         player.addPotionEffect(new PotionEffect(
@@ -204,7 +204,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
         if (!player.hasPermission("builders.util.noclip")) {
             setNoPermission(6, contents);
             contents.set(1, 6, ClickableItem.empty(
-                    Items.create(Material.COMPASS, "&6No Clip", "&7&lNo Permission")));
+                    Items.create(Material.COMPASS, "&6穿牆", "&7&l沒有權限")));
             return;
         }
 
@@ -212,7 +212,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(6, true, contents);
             contents.set(1, 6, ClickableItem.of(
                     Items.create(Material.COMPASS,
-                            "&6No Clip", ENABLED_LORE + NO_CLIP_LORE
+                            "&6穿牆", ENABLED_LORE + NO_CLIP_LORE
                     ),
                     inventoryClickEvent -> {
                         NoClipManager.noClipPlayerIds.remove(player.getUniqueId());
@@ -226,7 +226,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(6, false, contents);
             contents.set(1, 6, ClickableItem.of(
                     Items.create(Material.COMPASS,
-                            "&6No Clip", DISABLED_LORE + NO_CLIP_LORE
+                            "&6穿牆", DISABLED_LORE + NO_CLIP_LORE
                     ),
                     inventoryClickEvent -> {
                         NoClipManager.noClipPlayerIds.add(player.getUniqueId());
@@ -240,7 +240,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
         if (!player.hasPermission("builders.util.advancedfly")) {
             setNoPermission(7, contents);
             contents.set(1, 7, ClickableItem.empty(
-                    Items.create(Material.FEATHER, "&6Advanced Fly", "&7&lNo Permission")));
+                    Items.create(Material.FEATHER, "&6高級飛行", "&7&l沒有權限")));
             return;
         }
 
@@ -248,7 +248,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(7, true, contents);
             contents.set(1, 7, ClickableItem.of(
                     Items.create(Material.FEATHER,
-                            "&6Advanced Fly", ENABLED_LORE + ADVANCED_FLY_LORE
+                            "&6高級飛行", ENABLED_LORE + ADVANCED_FLY_LORE
                     ),
                     inventoryClickEvent -> {
                         PlayerMoveListener.enabledPlayers.remove(player.getUniqueId());
@@ -259,7 +259,7 @@ public class UtilitiesMenuProvider implements InventoryProvider {
             setEnabledGlassPanes(7, false, contents);
             contents.set(1, 7, ClickableItem.of(
                     Items.create(Material.FEATHER,
-                            "&6Advanced Fly", DISABLED_LORE + ADVANCED_FLY_LORE
+                            "&6高級飛行", DISABLED_LORE + ADVANCED_FLY_LORE
                     ),
                     inventoryClickEvent -> {
                         PlayerMoveListener.enabledPlayers.add(player.getUniqueId());

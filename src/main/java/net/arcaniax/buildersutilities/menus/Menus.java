@@ -44,7 +44,7 @@ public class Menus {
             .provider(new BannerMenuProvider())
             .size(6, 9)
             .listener(removeGhostItemsListener)
-            .title(ChatColor.BLUE + "Select a base color")
+            .title(ChatColor.BLUE + "選擇一個底色")
             .closeable(true)
             .build();
 
@@ -54,7 +54,7 @@ public class Menus {
             .provider(new BannerColorMenuProvider())
             .size(6, 9)
             .listener(removeGhostItemsListener)
-            .title(ChatColor.BLUE + "Select a color")
+            .title(ChatColor.BLUE + "選擇一個顏色")
             .closeable(true)
             .build();
 
@@ -64,7 +64,7 @@ public class Menus {
             .provider(new BannerPatternMenuProvider())
             .size(6, 9)
             .listener(removeGhostItemsListener)
-            .title(ChatColor.BLUE + "Select a pattern")
+            .title(ChatColor.BLUE + "選擇一個圖案")
             .closeable(true)
             .build();
 
@@ -74,7 +74,7 @@ public class Menus {
             .provider(new ColorMenuProvider())
             .size(6, 9)
             .listener(removeGhostItemsListener)
-            .title(ChatColor.BLUE + "Armor Color Creator")
+            .title(ChatColor.BLUE + "盔甲顏色創建器")
             .closeable(true)
             .build();
 
@@ -84,7 +84,7 @@ public class Menus {
             .provider(new SecretBlockMenuProvider())
             .size(1, 9)
             .listener(removeGhostItemsListener)
-            .title(ChatColor.BLUE + "Secret Blocks")
+            .title(ChatColor.BLUE + "秘密方塊")
             .closeable(true)
             .build();
 

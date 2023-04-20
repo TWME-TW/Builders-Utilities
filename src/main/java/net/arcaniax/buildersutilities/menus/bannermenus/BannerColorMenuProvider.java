@@ -41,12 +41,12 @@ public class BannerColorMenuProvider implements InventoryProvider {
     private static final ItemStack randomizeHead = Items.createHead(
             "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzk3OTU1NDYyZTRlNTc2NjY0NDk5YWM0YTFjNTcyZjYxNDNmMTlhZDJkNjE5NDc3NjE5OGY4ZDEzNmZkYjIifX19",
             1,
-            "&7Click to randomise",
+            "&7隨機選擇",
             ""
     );
     //    private static final ItemStack currentColor = BannerUtil.createBanner("&a", 1, DyeColor.WHITE, "");
     private static final ItemStack closeButton = Items
-            .create(Material.BARRIER, (short) 0, 1, "&cClick to close", "");
+            .create(Material.BARRIER, (short) 0, 1, "&c關閉", "");
     private static final ItemStack whiteBanner = Items
             .create(Material.WHITE_BANNER, (short) 0, 1, "&c", "");
 
@@ -71,7 +71,7 @@ public class BannerColorMenuProvider implements InventoryProvider {
                             BannerUtil.createDye("&3" + StringUtils.capitalize(color
                                     .toString()
                                     .toLowerCase()
-                                    .replace("_", " ")), color, "&7__&7click to select"),
+                                    .replace("_", " ")), color, "&7__&7選擇"),
                             inventoryClickEvent -> selectColor(player, color)
                     )
             );

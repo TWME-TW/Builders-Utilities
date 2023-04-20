@@ -37,12 +37,12 @@ public class BannerMenuProvider implements InventoryProvider {
     private static final ItemStack randomizeHead = Items.createHead(
             "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzk3OTU1NDYyZTRlNTc2NjY0NDk5YWM0YTFjNTcyZjYxNDNmMTlhZDJkNjE5NDc3NjE5OGY4ZDEzNmZkYjIifX19",
             1,
-            "&7Click to randomise",
+            "&7隨機選取",
             ""
     );
     //    private static final ItemStack currentColor = BannerUtil.createBanner("&a", 1, DyeColor.WHITE, "");
     private static final ItemStack closeButton = Items
-            .create(Material.BARRIER, (short) 0, 1, "&cClick to close", "");
+            .create(Material.BARRIER, (short) 0, 1, "&c關閉", "");
     private static final ItemStack whiteBanner = Items
             .create(Material.WHITE_BANNER, (short) 0, 1, "&c", "");
 
@@ -63,7 +63,7 @@ public class BannerMenuProvider implements InventoryProvider {
                             BannerUtil.createBanner("&3" + StringUtils.capitalize(color
                                     .toString()
                                     .toLowerCase()
-                                    .replace("_", " ")), color, "&7__&7Click to select"),
+                                    .replace("_", " ")), color, "&7__&7選擇"),
                             inventoryClickEvent -> selectColor(player, color)
                     )
             );
@@ -91,7 +91,7 @@ public class BannerMenuProvider implements InventoryProvider {
         DyeColor dyeColor = BannerUtil.getRandomDye();
         BannerUtil.currentBanner.put(
                 player.getUniqueId(),
-                BannerUtil.createBanner("&6Banner", dyeColor, "&7__&7Click to get banner")
+                BannerUtil.createBanner("&6旗幟", dyeColor, "&7__&7點擊獲得旗幟")
         );
         Menus.BANNER_MENU_COLOR.open(player);
     }
@@ -99,7 +99,7 @@ public class BannerMenuProvider implements InventoryProvider {
     private void selectColor(Player player, DyeColor dyeColor) {
         BannerUtil.currentBanner.put(
                 player.getUniqueId(),
-                BannerUtil.createBanner("&6Banner", dyeColor, "&7__&7Click to get banner")
+                BannerUtil.createBanner("&6旗幟", dyeColor, "&7__&7點擊獲得旗幟")
         );
         Menus.BANNER_MENU_COLOR.open(player);
     }
