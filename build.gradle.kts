@@ -5,9 +5,9 @@ import org.ajoberstar.grgit.Grgit
 plugins {
     java
 
-    id("com.diffplug.spotless") version "6.17.0"
-    id("com.github.johnrengelman.shadow") version "8.1.0"
-    id("org.ajoberstar.grgit") version "5.0.0"
+    id("com.diffplug.spotless") version "6.18.0"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("org.ajoberstar.grgit") version "5.2.0"
 
     idea
     eclipse
@@ -40,9 +40,9 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.19.3-R0.1-SNAPSHOT")
     compileOnly("com.mojang:authlib:1.5.25")
-    implementation("org.bstats:bstats-bukkit:3.0.1")
-    implementation("org.bstats:bstats-base:3.0.1")
-    implementation("com.github.cryptomorin:XSeries:9.3.0")
+    implementation("org.bstats:bstats-bukkit:3.0.2")
+    implementation("org.bstats:bstats-base:3.0.2")
+    implementation("com.github.cryptomorin:XSeries:9.3.1")
     implementation("dev.notmyfault.serverlib:ServerLib:2.3.1")
     implementation("io.papermc:paperlib:1.0.8")
     compileOnly("org.apache.logging.log4j:log4j-api:2.19.0")
@@ -67,11 +67,11 @@ tasks.named<ShadowJar>("shadowJar") {
     archiveClassifier.set(null as String?)
     dependencies {
         relocate("com.cryptomorin.xseries", "net.arcaniax.buildersutilities.xseries") {
-            include(dependency("com.github.cryptomorin:XSeries:9.3.0"))
+            include(dependency("com.github.cryptomorin:XSeries:9.3.1"))
         }
         relocate("org.bstats", "net.arcaniax.buildersutilities.metrics") {
-            include(dependency("org.bstats:bstats-base:3.0.1"))
-            include(dependency("org.bstats:bstats-bukkit:3.0.1"))
+            include(dependency("org.bstats:bstats-base:3.0.2"))
+            include(dependency("org.bstats:bstats-bukkit:3.0.2"))
         }
         relocate("io.papermc.lib", "net.arcaniax.buildersutilities.paperlib") {
             include(dependency("io.papermc:paperlib:1.0.8"))
